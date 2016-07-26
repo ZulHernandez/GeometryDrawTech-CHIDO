@@ -1,0 +1,16 @@
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+ErrorDocument 400 web/error/cuatroz.html 
+ErrorDocument 401 web/error/cuatrou.html 
+ErrorDocument 403 web/error/cuatrot.html 
+ErrorDocument 404 web/error/cuatroc.html
+ErrorDocument 405 web/error/cuatroci.html 
+ErrorDocument 500 web/error/cincoz.html 
+ErrorDocument 501 web/error/cincou.html 
+ErrorDocument 502 web/error/cincod.html
+ErrorDocument 503 web/error/cincot.html 
+ErrorDocument 504 web/error/cincoc.html 
+ErrorDocument 505 web/error/cincoci.html 

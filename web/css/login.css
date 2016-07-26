@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track{
+    background-color:rgba(0,0,0,0.9);
+    color: #999999
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(99,99,99,0.8);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(20,113,143,0.8);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: transparent;
+}
+
+body
+{
+    font-family: "Roboto", sans-serif;
+    background: url("../imgs/porpoiseGif.gif") no-repeat top center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 5%;
+    overflow-x: hidden;
+}
+#cuerpo
+{
+    background-color: rgba(0,0,0,0.9);
+    padding: 20px;
+
+}
+#cabeza
+{
+    margin:0 auto 0 auto;
+    background-color: rgba(0,0,0,0.9);
+
+}
+center
+{
+    color: white;
+}
+input
+{
+    zoom:2;
+}
+
+txt
+{
+    font-size: 38px;
+}
+
+#boton
+{
+    font-size:18px;
+    background-color:transparent;
+    border-color:white;
+    color:white;
+    cursor:pointer;
+    border-style: solid;
+}
+
+#booton
+{
+    font-size:18px;
+    background-color:transparent;
+    border-color:white;
+    color:white;
+    cursor:pointer;
+    border-style: solid;
+}
+
+#boton:hover
+{
+    background-color:white;
+    color:rgba(0,0,0,0.9);
+}
+
+#booton:hover
+{
+    background-color:white;
+    color:rgba(0,0,0,0.9);
+}
+
+#todo
+{
+    width:90%;
+}
