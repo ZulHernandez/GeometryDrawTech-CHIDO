@@ -52,12 +52,47 @@
                     };
                 }
             }
+            window.onload = function ()
+            {
+                var largo1 = window.innerWidth;
+                var coluis = document.getElementById("hola");
+                
+                if (largo1 > 975)
+                {
+                    coluis.cols = "135px,*%";  
+                } else
+                {
+                    coluis.cols = "65px,*%";
+                }
+            }
+            window.onresize = function ()
+            {
+                var largo1 = window.innerWidth;
+                var coluis = document.getElementById("hola");
+                
+                if (largo1 > 975)
+                {
+                    coluis.cols = "135px,*%";  
+                } else
+                {
+                    coluis.cols = "65px,*%";
+                }
+            }
         </script>
+        <style>
+            #hola
+            {
+                -webkit-transition:all .2s ease; /* Safari y Chrome */
+                -moz-transition:all .2s ease; /* Firefox */
+                -o-transition:all .2s ease; /* IE 9 */
+                -ms-transition:all .2s ease; /* Opera */
+            }
+        </style>
 </head>
 	<frameset noresize rows="60px,*%" frameborder="0">
 		<frame src="frames/head.jsp" frameborder="0"  name="head">
-		<frameset cols="135px,*%" frameborder="0">
-			<frame src="frames/menu.jsp" frameborder="0" noresize name="menu">
+		<frameset id="hola" cols="135px,*%" frameborder="0">
+			<frame src="frames/menu.jsp" frameborder="0" name="menu">
 			<frame src="<%=url%>" frameborder="0" name="body" scrolling="yes">
 		</frameset>
 	</frameset>

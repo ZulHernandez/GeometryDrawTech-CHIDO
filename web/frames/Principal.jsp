@@ -33,18 +33,16 @@
     <link href="../css/material.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        
         <div id="todo">
             <div id="txt">
                 <center>
                     <br/><br/><txt>
-                        <h1>Descarga aqui la aplicacion local.</h1>
+                        <h1>Descarga aqu&iacute; la aplicaci&oacute;n local.</h1>
                         <a href="../imgs/DRAWTECH.zip" download="DRAWTECH.zip">
                             <img src="../imgs/fondo.jpg" id="fondo"/>
                         </a>    
-                        <div class="mdl-tooltip " for="fondo">DESCARGAR</div>
-                        <br/><br/>
-                        Click en la imagen para iniciar la descarga de la aplicacion.<br/><br/>
+                        <br/><br/><br/><br/>
+                        Click en la imagen para iniciar la descarga de la aplicaci&oacute;n.<br/><br/><br/><br/>
                     </txt> 
                     <br/>
                 </center>

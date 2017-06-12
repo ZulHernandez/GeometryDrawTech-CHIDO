@@ -1,3 +1,4 @@
+
 <%--
     Document   : bandeja
     Created on : 27-abr-2016, 17:39:34
@@ -28,8 +29,8 @@
                 }
             }
         }
-    }
-    
+    } 
+
     ResultSet comentarios = gatito.obtenComentarios();
     ResultSet contenido = gatito.obtenContenido();
 %>
@@ -55,6 +56,9 @@
                 font-family: "Roboto", Verdana;
                 background-color:<%=color%>;
                 padding: 15px;
+                -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
             }
             a:link, a:visited, a:hover, a:active
             {
@@ -103,7 +107,7 @@
         <%}%>
         <div class="post">
             <center><h2>BANDEJA DE ENTRADA</h2><BR/>
-                <p>Aqui llegaran los comentarios realizados por los alumnos antes de ser mostrados en el blog.</p></center>
+                <p>Aqu&iacute; llegaran los comentarios realizados por los alumnos antes de ser mostrados en el blog.</p></center>
         <div class="coments">
         <%while(comentarios.next()){
             if(comentarios.getString("estado").equals("0")){
@@ -111,7 +115,7 @@
         <hr>
 		<div class="comment1">
                     <div class="user1">
-			<img src="imgs/male.jpg" width="40px" heigt="40px">
+			<img src="<%=comentarios.getString("foto")%>" width="40px" heigt="40px">
                         &nbsp;&nbsp;&nbsp;&nbsp;<gatito><%=comentarios.getString("autor")%></gatito>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=comentarios.getString("fecha").replace("-","/")%>
                     </div><hr>
 			<div class="text1"><p><%=comentarios.getString("contEscrito").replace("<","&lt;")%></p></div>

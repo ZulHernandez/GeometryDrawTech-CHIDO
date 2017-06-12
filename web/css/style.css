@@ -1,0 +1,28 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+canvas{
+  vertical-align:bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 150%;
+  height: 150%;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  background-image: url('https://media.giphy.com/media/YU1NGo5mVYLFC/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

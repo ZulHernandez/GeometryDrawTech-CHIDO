@@ -1,11 +1,12 @@
-@font-face 
-{
+@font-face {
     font-family: "Roboto";
-    src: url(fuentes/Roboto-Regular.ttf) format("truetype");
+    src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
 }
 body
 {
     font-family: "Roboto", Verdana;
+    overflow-y: hidden;
 }
 a:link, a:visited, a:hover, a:active
 {
@@ -16,8 +17,7 @@ a:link, a:visited, a:hover, a:active
 button
 {
     border-color:transparent;
- //font-family:;  
- background-color: transparent;
+    background-color: transparent;
     width: 100%;
     text-align: center;
     color:white;

@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Roboto";
-    src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+    src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
 }
 
 ::-webkit-scrollbar{
@@ -28,23 +29,21 @@
 body
 {
     font-family: "Roboto", sans-serif;
-    background: url("../imgs/porpoiseGif.gif") no-repeat top center;
     background-attachment: fixed;
     background-size: 100% 100%;
-    padding: 5%;
+    padding: 0px;
     overflow-x: hidden;
 }
 #cuerpo
 {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.7);
     padding: 20px;
-
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #cabeza
 {
-    margin:0 auto 0 auto;
-    background-color: rgba(0,0,0,0.9);
-
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 center
 {
@@ -94,5 +93,8 @@ txt
 
 #todo
 {
-    width:90%;
+    position: absolute;
+    z-index: 5;
+    width: 90%;
+    padding: 5%;
 }

@@ -33,8 +33,8 @@
      {
      claveAlum=datos.getString("Clave");
      }*/
-     //String tipoSesion=request.getAttribute("TipoUsr").toString();
-     /*if(usr.equals(""))
+    //String tipoSesion=request.getAttribute("TipoUsr").toString();
+    /*if(usr.equals(""))
      {
      response.sendRedirect("../login.html");
      }*/
@@ -63,7 +63,13 @@
         <style type="text/css">
             @font-face {
                 font-family: "Roboto";
-                src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+                src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
+            }
+            html{
+                -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
             }
             body
             {
@@ -72,6 +78,7 @@
                 background-attachment: fixed;
                 padding: 15px;
                 color: white;
+                
             }
             td
             {
@@ -126,7 +133,7 @@
     <body onload="refre();">
         <div id="container">
             <form id="editaDatos" name="editaDatos" action="../jsp/actualiza.jsp" method="POST"/>
-            <gatito>CONFIGURACION GENERAL DE DATOS</gatito>
+            <gatito>CONFIGURACI&Oacute;N GENERAL DE DATOS</gatito>
             <hr/>
             <table style="width: 70%">
                 <input type="hidden" id="campoEditado" name="campoEditado" value="0" />
@@ -134,18 +141,18 @@
                 <input type="hidden" id="claveConfirmada" name="claveConfirmada" value=" " />
                 <tr>
                     <td style="width: 30%"><gatito>NOMBRE</gatito></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" type="text" id="nombre" name="nombre"  value="<%=nombreAd%>" /></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editNombre0" name="editNombre" value="Cambiar" onclick="verificarContra(1)" /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" type="text" id="nombre" name="nombre"  value="<%=nombreAd%>" /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editNombre0" name="editNombre" value="Cambiar" onclick="verificarContra(1)" /></td>
                 </tr>
                 <tr>
                     <td style="width: 30%"><gatito>Contrase&ntilde;a </gatito></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" type="password" id="clave" name="clave" value="<%=claveAd%>"  /></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editClave" name="editClave" value="Cambiar" onclick="verificarContra(2)" /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" type="password" id="clave" name="clave" value="<%=claveAd%>"  /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editClave" name="editClave" value="Cambiar" onclick="verificarContra(2)" /></td>
                 </tr>
                 <tr id="revelde">
                     <td style="width: 30%"><gatito>Contrase&ntilde;a del Sitio</gatito></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" type="password" id="claveGral" name="claveGral" value="<%=claveAlum%>"  /></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editClaveGral" name="editClaveGral" value="Cambiar" onclick="verificarContra(3)" /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" type="password" id="claveGral" name="claveGral" value="<%=claveAlum%>"  /></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editClaveGral" name="editClaveGral" value="Cambiar" onclick="verificarContra(3)" /></td>
                 </tr>
             </table>
             <br/><br/>
@@ -154,37 +161,37 @@
             <table style="width: 70%">
                 <tr>
                     <td style="width: 30%"><gatito>Color de fondo</gatito></td>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" type="color" id="colorGral" list="colors" value="<%=color%>" name="colorGral"/></td>
-                    <datalist id="colors">
-                        <option>#000000</option>
-                        <option>#002233</option>
-                        <option>#004466</option>
-                        <option>#006699</option>
-                        <option>#0088cc</option>
-                        <option>#00aaff</option>
-                        <option>#33bbff</option>
-                        <option>#66ccff</option>
-                        <option>#99ddff</option>
-                        <option>#cceeff</option>
-                    </datalist>
-                    <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editColorGral" name="editColorGral" value="Cambiar" onclick="verificarContra(4)"/></td>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" type="color" id="colorGral" list="colors" value="<%=color%>" name="colorGral"/></td>
+                <datalist id="colors">
+                    <option>#000000</option>
+                    <option>#002233</option>
+                    <option>#004466</option>
+                    <option>#006699</option>
+                    <option>#0088cc</option>
+                    <option>#00aaff</option>
+                    <option>#33bbff</option>
+                    <option>#66ccff</option>
+                    <option>#99ddff</option>
+                    <option>#cceeff</option>
+                </datalist>
+                <td class="espacio" style="width: 35%"><input style="width: 130px" class="boto" type="button" id="editColorGral" name="editColorGral" value="Cambiar" onclick="verificarContra(4)"/></td>
 
                 </tr>
                 </form>
                 <form id="editaIm" name="editaIm" action="../jsp/actualiza.jsp" method="POST" enctype="multipart/form-data" />
                 <tr>
                     <td style="width: 30%" rowspan="2"><gatito>Foto de perfil</gatito></td>
-                    <td class="espacio" style="width: 35%" rowspan="2" >
-                        <img src="../<%=usuario.getString("foto")%>" width="60" height="60" /><br />
-                    </td>
-                        <td>
-                            <button class="file-upload" id="enviar"><input type="file" id="fotoUsr" name="fotoUsr" class="file-input" onchange="validaImagen(this); txt2()"/>Agregar imagen:<div id="ext2"></div></button>
-                            <input type="hidden" id="archivo" name="archivo">
-                            <input type="hidden" name="idUsuario" value="<%=usuario.getString("idUsuario")%>">
-                        </td>
-                    <tr>
-                        <td class="espacio" style="width: 35%"><input style="width: 130px" type="button" class="boto" id="editaFoto" name="editaFoto" value="Editar" onclick="verificarContra(6)" /></td>
-                    </tr>
+                <td class="espacio" style="width: 35%" rowspan="2" >
+                    <img src="../<%=usuario.getString("foto")%>" width="60" height="60" /><br />
+                </td>
+                <td>
+                    <button class="file-upload" id="enviar"><input type="file" id="fotoUsr" name="fotoUsr" class="file-input" onchange="validaImagen(this); txt2()"/>Agregar imagen:<div id="ext2"></div></button>
+                    <input type="hidden" id="archivo" name="archivo">
+                    <input type="hidden" name="idUsuario" value="<%=usuario.getString("idUsuario")%>">
+                </td>
+                <tr>
+                    <td class="espacio" style="width: 35%"><input style="width: 130px" type="button" class="boto" id="editaFoto" name="editaFoto" value="Editar" onclick="verificarContra(6)" /></td>
+                </tr>
                 </tr>
             </table>
         </form>

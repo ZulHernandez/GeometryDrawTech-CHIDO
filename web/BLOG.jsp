@@ -88,11 +88,23 @@
                 background-color:<%=color%>;
                 padding: 15px;
                 overflow-x: hidden;
+                -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
             }
             #tache
             {
+                vertical-align: middle;
                 width:32px;
                 height: 32px;
+                text-align: center;
+            }
+            #letrero
+            {
+                vertical-align: middle;
+                text-align: center;
+                font-size: 30px;
+                color: #dd2c00;
             }
         </style>
         <script type="text/javascript">
@@ -101,7 +113,7 @@
             }
         </script>
     </head>
-    <body style="width: 95%" onload="refre()">
+    <body style="width: 100%" onload="refre()">
 
         <%while (blog.next()) {
                 if (blog.getString("tipo").equals("1")) {
@@ -109,10 +121,7 @@
         <div class="container" >
             <div class="post">
                 <%if (taches.equals("1")) {%>
-                <img src="imgs/tache.png" id="tache" onclick="confirma(<%=blog.getString("idParte")%>, 'Post');"/><br>
-                <div class="mdl-tooltip" for="tache">
-                    ELIMINAR 
-                </div>
+                <img src="imgs/tache.png" id="tache" onmouseover="elim();" onclick="confirma(<%=blog.getString("idParte")%>, 'Post');"/><span id="letrero">&nbsp;&nbsp;&nbsp;ELIMINAR</span><br>
                 <%}%>
                 <br/>
                 <img src="<%=blog.getString("foto")%>" width="45px" heigt="45px" align="middle">
@@ -124,7 +133,9 @@
                             if (contenido.getString("TipoCont").equals("1") && contenido.getString("idParte").equals(blog.getString("idParte"))) {
                     %>
                     <div class="image">
-                        <center><img src="<%=contenido.getString("archivo")%>" width="70%"/></center>
+                        <center><img src="<%=contenido.getString("archivo")%>" width="70%" style="-webkit-box-shadow: 0px 0px 50px -12px rgba(0,0,0,1);
+                        -moz-box-shadow: 0px 0px 50px -12px rgba(0,0,0,1);
+                        box-shadow: 0px 0px 50px -12px rgba(0,0,0,1);"/></center>
                     </div>
                     <%} else {
                         if (contenido.getString("TipoCont").equals("2") && contenido.getString("idParte").equals(blog.getString("idParte"))) {
@@ -165,7 +176,7 @@
                             if (contenido.getString("TipoCont").equals("1") && contenido.getString("idParte").equals(comentarios.getString("idParte"))) {
                     %>
                     <div class="image">
-                        <center><img src="<%=contenido.getString("archivo")%>" style="width:25%" /></center>
+                        <center><img src="<%=contenido.getString("archivo")%>" style="width:25%;" id="imagenessss" /></center>
                     </div> 
                     <%} else {
                         if (contenido.getString("TipoCont").equals("2") && contenido.getString("idParte").equals(comentarios.getString("idParte"))) {

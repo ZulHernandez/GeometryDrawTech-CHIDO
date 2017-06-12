@@ -48,6 +48,7 @@
     </head>
     <body>
         <style>
+            
             .mdl-layout__header
             {
                 background-color: #121D24;
@@ -79,7 +80,7 @@
                 var mensaje = document.getElementById("contenido");
                 if(autor.value != "" && autor.value != null){
                     if(mensaje.value != "" && mensaje.value != null){
-                        alert("ya tru");
+                       // alert("ya tru");
                         valido = true;
                     }else{
                         swal({title: 'ERROR',text: 'Mensaje Vacio',type: 'error',showConfirmButton: true,timer: 3000, html: false,allowEscapeKey:false},function(){valido=false;});
@@ -126,6 +127,7 @@
                         <a class="mdl-navigation__link" href="prop.html"><b><font color="white">&laquo;PROPUESTAS&raquo; </font></b></a>
                         <a class="mdl-navigation__link" href="contacto.jsp"><b><font color="white">&laquo;CONTACTANOS&raquo; </font></b></a>
                         <a class="mdl-navigation__link" href="htm.html"><b><font color="white">&laquo;DO IT YOURSELF&raquo; </font></b></a>
+                        <a class="mdl-navigation__link" href="descargas.html"><b><font color="white">&laquo;DOWNLOADS&raquo; </font></b></a>
                         <a class="mdl-navigation__link" href="../../login.html" target="_blank"><b><font color="white">&laquo;BLOG&raquo; </font></b></a>
                     </nav>
                 </div>
@@ -137,6 +139,7 @@
                     <a class="mdl-navigation__link" href="prop.html"><b><font color="white">&laquo;PROPUESTAS&raquo; </font></b></a>
                     <a class="mdl-navigation__link" href="contacto.jsp"><b><font color="white">&laquo;CONTACTANOS&raquo; </font></b></a>
                     <a class="mdl-navigation__link" href="htm.html"><b><font color="white">&laquo;DO IT YOURSELF&raquo; </font></b></a>
+                    <a class="mdl-navigation__link" href="descargas.html"><b><font color="white">&laquo;DOWNLOADS&raquo; </font></b></a>
                     <a class="mdl-navigation__link" href="../../login.html" target="_blank"><b><font color="white">&laquo;BLOG&raquo; </font></b></a>
                 </nav>
             </div>
@@ -153,23 +156,23 @@
                 <br />
                 <txt style="font-size: 24px;"><center>
                     &#161;&#161;MARSOFT ESCUCHA A SUS CLIENTES&#33;&#33;
-                    <br/><font style="font-size: 16px;">"Siguenos en nuestras redes sociales para m&aacute;s de la marsopa"</font>
+                    <br/><font style="font-size: 16px;">"S&iacute;guenos en nuestras redes sociales para m&aacute;s de la marsopa"</font>
                 </center></txt>
                 <br/>
                 <p/><p/><p/>
                 <table>
                     <td width="30%">
-                        <br/><a href="https://sketchfab.com/bear59814" target="_blanck"><img id="sk" src="../../imgs/sketch.png"/></a><font size="1.5">SKETCHFAB</font>
-                        <br/><a href="https://www.facebook.com/marsoftTeam/?fref=ts" target="_blanck"><img id="fa" src="../imgs/face.png"/></a>FACEBOOK
-                        <br/><a href="https://twitter.com/marsoftTeam" target="_blanck"><img id="tw" src="../imgs/tw.png"/></a>TWITTER
-                        <br/><a href="https://www.youtube.com/channel/UCi-6y0AaXNvcHBxtj15UtPA" target="_blanck"><img id="yt" src="../imgs/ytb.png"/></a>YOUTUBE
+                        <br/><a href="https://sketchfab.com/bear59814" target="_blanck"><img class="icono" id="sk" src="../../imgs/sketch.png"/></a><font size="1.5">SKETCHFAB</font>
+                        <br/><a href="https://www.facebook.com/marsoftTeam/?fref=ts" target="_blanck"><img class="icono" id="fa" src="../imgs/face.png"/></a>FACEBOOK
+                        <br/><a href="https://twitter.com/marsoftTeam" target="_blanck"><img class="icono" id="tw" src="../imgs/tw.png"/></a>TWITTER
+                        <br/><a href="https://www.youtube.com/channel/UCi-6y0AaXNvcHBxtj15UtPA" target="_blanck"><img class="icono" id="yt" src="../imgs/ytb.png"/></a>YOUTUBE
                     </td>
                     <td width="70%">
                         <form action="" method="POST" id="formu" name="formu" onsubmit="return false;confirma();">
                             NOMBRE:
                             <input type="text" id="contenidos" name="nombre" placeholder="Nombre..." autocomplete="off"/>
                             <br/><br/>
-                            ENVIANOS TU COMENTARIO:
+                            ENV&Iacute;ANOS TU COMENTARIO:
                             <textarea id="contenido" rows="4" maxlength="300" name="contenido" placeholder="Escribe tu comentario..."></textarea>
                             <br/><button onclick="confirma();"><span>ENVIAR</span></button>
                             <input type="hidden" id="par" name="par" value="gatito" />

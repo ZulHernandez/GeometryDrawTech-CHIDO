@@ -1,7 +1,7 @@
-@font-face 
-{
+@font-face {
     font-family: "Roboto";
-    src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+    src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
 }
 body
 {
@@ -9,6 +9,10 @@ body
     font-family: "Roboto";
     color: white;
     background-color: white;
+    -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+    overflow-y:hidden; 
 }
 txt
 {

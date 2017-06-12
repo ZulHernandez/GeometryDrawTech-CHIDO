@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script Language="JavaScript">
-            window.onload = function () 
+            window.onload = function ()
             {
                 if (typeof history.pushState === "function") {
                     history.pushState("jibberish", null, null);
@@ -20,8 +20,7 @@ and open the template in the editor.
                         // Handle the back (or forward) buttons here
                         // Will NOT handle refresh, use onbeforeunload for this.
                     };
-                }
-                else {
+                } else {
                     var ignoreHashChange = true;
                     window.onhashchange = function () {
                         if (!ignoreHashChange) {
@@ -31,15 +30,19 @@ and open the template in the editor.
                             // Works in older FF and IE9
                             // * it does mess with your hash symbol (anchor?) pound sign
                             // delimiter on the end of the URL
-                        }
-                        else {
-                            ignoreHashChange = false;   
+                        } else {
+                            ignoreHashChange = false;
                         }
                     };
                 }
             }
         </script>
         <style>
+            @font-face {
+                font-family: "Roboto";
+                src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
+            }
             body
             {
                 background-color: black;

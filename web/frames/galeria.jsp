@@ -23,10 +23,17 @@
         <style>
             @font-face {
                 font-family: "Roboto";
-                src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+                src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
+            }
+            html{
+                -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
             }
             body{
                 background-color: rgb(25,25,25);
+                    
             }
             ::-webkit-scrollbar{
                 width: 10px;
@@ -71,19 +78,27 @@
             }
             .img
             {
+                -webkit-transition:all .3s ease; /* Safari y Chrome */
+                -moz-transition:all .3s ease; /* Firefox */
+                -o-transition:all .3s ease; /* IE 9 */
+                -ms-transition:all .3s ease; /* Opera */
                 height: 112.4px;
                 width: 200px;
             }
             .img:hover
             {
+                
                 cursor: pointer;
                 -webkit-filter: blur(5px);
                 -moz-filter: blur(5px);
                 -o-filter: blur(5px);
                 -ms-filter: blur(5px);
                 filter: blur(5px);
-                height: 122.4px;
-                width: 210px;
+                -webkit-transform:scale(1.1);
+                -moz-transform:scale(1.1);
+                -ms-transform:scale(1.1);
+                -o-transform:scale(1.1);
+                transform:scale(1.1);
             }
             th
             {
@@ -105,7 +120,7 @@
     </head>
     <body>
     <center>
-        <div id="titulo">GALERIAS</div
+        <div id="titulo">GALER&Iacute;AS</div
         <br/>
         <div style="overflow-x: auto">
             <table>
@@ -114,14 +129,16 @@
                     <th>MODELOS</th>
                     <th>COLLAR&Iacute;N</th>
                     <th>OTROS</th>
+                    <th>LOGOS</th>
                     <!--<th>ESCUDOS</th>-->
                 </tr>
                 <tr>
                     <td><img class="img" src="../imgs/conicas.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=8e4042ae07fd427d8d753dad0f82301a');"/></td>
                     <td><img class="img" src="../imgs/modelos.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=8757845302e140c18b661e64a6b46546');"/></td>
                     <td><img class="img" src="../imgs/collarin.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=d97b4f143f8c4ad89eb354e73e475894');"/></td>
-                    <td><img class="img" src="../imgs/otros.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=c7c6b5ebc0bb4505bee96e64c482b3e4');"/></td>
-                    <!--<td><img class="img" src="../imgs/escudos.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=896e1c8ec8b14ac4976586b8337ba42b');"/></td>-->
+                    <td><img class="img" src="../imgs/otross.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=c7c6b5ebc0bb4505bee96e64c482b3e4');"/></td>
+                    <td><img class="img" src="../imgs/logos.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=8475a51b97b8495f86c0c34572cdcc63');"/></td>
+                    <!--<td><img class="img" src="../imgs/escudoss.png" alt="" onclick="show('https://sketchfab.com/playlists/embed?collection=896e1c8ec8b14ac4976586b8337ba42b');"/></td>-->
                 </tr>
             </table>
         </div>
@@ -131,7 +148,7 @@
     </center>
     <footer id="foot">
         <br/>
-        Para ver más modelos dirigete al siguiente enlace:
+        Para ver más modelos dir&iacute;gete al siguiente enlace:
         <br/><br/>
         <a href="https://sketchfab.com/bear59814/collections" target="_blanck"><img width="10%" id="sk" src="../imgs/sketchfab.jpg"/></a>
         <br/><br/>

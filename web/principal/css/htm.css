@@ -2,21 +2,22 @@
 /*CSS Document*/
 @font-face {
     font-family: "Roboto";
-    src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+    src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
 }
 
 ::-webkit-scrollbar{
-  width: 10px;
-  background-color: transparent;
+    width: 10px;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-track{
-  background-color:transparent;
-  color: #999999
+    background-color:transparent;
+    color: #999999
 }
 
 ::-webkit-scrollbar-thumb{
-  background: rgba(99,99,99,0.8);
+    background: rgba(99,99,99,0.8);
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -24,7 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: transparent;
+    background: transparent;
 }
 
 body
@@ -150,7 +151,7 @@ main
     transition: all 0.2s;
     display: inline-block;
     cursor: pointer;
-    
+
 }
 
 .button:hover 

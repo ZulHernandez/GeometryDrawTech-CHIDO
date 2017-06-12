@@ -7,24 +7,24 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" session="true"%>
 <%
-    HttpSession nSesion= request.getSession();
-    String usr = nSesion.getAttribute("Valido")== null ? "" : nSesion.getAttribute("Usuario").toString(); 
-    int tipoSesion= Integer.parseInt(nSesion.getAttribute("TipoUsr").toString());
-    if(usr.equals(""))
-    {
+    HttpSession nSesion = request.getSession();
+    String usr = nSesion.getAttribute("Valido") == null ? "" : nSesion.getAttribute("Usuario").toString();
+    int tipoSesion = Integer.parseInt(nSesion.getAttribute("TipoUsr").toString());
+    if (usr.equals("")) {
         response.sendRedirect("../login.html");
-        
+
     }
-    String color=nSesion.getAttribute("Color").toString();
+    String color = nSesion.getAttribute("Color").toString();
     Clases.cLogica gatito = new Clases.cLogica();
-    ResultSet usuario = gatito.consultaUsuario(usr,0);
+    ResultSet usuario = gatito.consultaUsuario(usr, 0);
     String autor = "";
-    if (usuario.next()){
-        if(usuario.getString("nombre") != null)
+    if (usuario.next()) {
+        if (usuario.getString("nombre") != null) {
             autor = usuario.getString("nombre");
-        else
+        } else {
             autor = usuario.getString("error");
-    }else{
+        }
+    } else {
         autor = "ni madres";
     }
 %>
@@ -33,23 +33,23 @@
     <head>
         <title>GeometryDrawtechBlog</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="text/html" charset=UTF-8">
         <link rel="icon" type="image/png" href="imgs/icono.ico"/>
         <link href="css/sweetalert-master/dist/sweetalert.css" rel="stylesheet" type="text/css"/>
         <script src="css/sweetalert-master/dist/sweetalert.min.js" type="text/javascript"></script>
         <style>
             ::-webkit-scrollbar{
-              width: 10px;
-              background-color: transparent;
+                width: 10px;
+                background-color: transparent;
             }
 
             ::-webkit-scrollbar-track{
-              background-color:transparent;
-              color: #999999
+                background-color:transparent;
+                color: #999999
             }
 
             ::-webkit-scrollbar-thumb{
-              background: rgba(99,99,99,0.8);
+                background: rgba(99,99,99,0.8);
             }
 
             ::-webkit-scrollbar-thumb:hover{
@@ -57,18 +57,25 @@
             }
 
             ::-webkit-scrollbar-thumb:window-inactive {
-              background: transparent;
+                background: transparent;
             }
+            html{
+                -webkit-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                -moz-box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);
+                box-shadow: inset 20px 20px 55px -20px rgba(0,0,0,0.65);}
             body
             {
-                padding: 20px;
                 background-color:<%=color%>;
                 font-family: "Roboto",arial;
+                
+                overflow-x: hidden;
+                width: 100%;
+                height: 100%;
             }
-            @font-face 
-            {
+            @font-face {
                 font-family: "Roboto";
-                src: url(fuentes/Roboto-Regular.ttf) format("truetype");
+                src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
             }
             .container
             {
@@ -145,7 +152,7 @@
                 background-color: rgb(68,183,234); 
                 color:black;
             }
-                            
+
             .archivo
             {
                 cursor: pointer;
@@ -165,7 +172,7 @@
                 cursor: pointer;
                 opacity: 0;
                 filter: alpha(opacity=0); }
-              
+
             #enviar,#boto
             {
                 zoom:1.5;
@@ -186,34 +193,34 @@
                 validaImagen(document.getElementById("imagen"));
             }
             /*function alerta()
-            {
-                swal({title:"¿Deseas enviar este post?",text:"Sera publicado directamente en el blog",type: "warning",showCancelButton: true,confirmButtonColor: "#DD6B55",confirmButtonText: "PUBLICAR",closeOnConfirm: false,closeOnCancel: false },function(isConfirm){if(isConfirm){swal("EXITO!","TU POST SERA PUBLICADO","success");}else{swal("CANCELADO!","TU POST NO SERA PUBLICADO AUN","error");}});
-            }*/
+             {
+             swal({title:"¿Deseas enviar este post?",text:"Sera publicado directamente en el blog",type: "warning",showCancelButton: true,confirmButtonColor: "#DD6B55",confirmButtonText: "PUBLICAR",closeOnConfirm: false,closeOnCancel: false },function(isConfirm){if(isConfirm){swal("EXITO!","TU POST SERA PUBLICADO","success");}else{swal("CANCELADO!","TU POST NO SERA PUBLICADO AUN","error");}});
+             }*/
         </script>
     </head>
     <body>
         <div class="container">
-            <div id="avatar">
-                <img src="<%=usuario.getString("foto")%>" id="imagenavatar" name="igamenavatar" alt="Felisa H. F."/>
-                <br/><br/>
-            </div>
             <form id="posteo" action="recibeDatos" method="POST" enctype="multipart/form-data" name="formulario" onsubmit="return enviaForm(2);">
                 <br/><br/>
                 <div id="forma">
-                    <div id="autor">
+                    <div id="avatar">
+                        <img src="<%=usuario.getString("foto")%>" id="imagenavatar" name="igamenavatar" alt="Felisa H. F."/>
+                        <br/><br/>
+                    </div>
+                        <div id="autor" style="font-size: 30px; vertical-align: middle;">
                         <%=autor%>
                     </div>
                     <textarea id="contenido" rows="4" maxlength="500" name="contenido" placeholder="Escribe el contenido del post..."></textarea>
                     <div id="archivo">
                         <br/>
-                            <button class="file-upload" id="enviar"><input type="file" id="imagen" name="imagen" class="file-input" onchange="validaImagen(this); txt2()"/>Agregar imagen:<div id="ext2"></div></button><br />
-                            <input type="hidden" name="oculto1" id="oculto1"/><br/>
-                            <button class="file-upload"  id="enviar"><input type="file" id="audio" name="audio" class="file-input" onchange="txt();"/>Agregar archivo:<div id="ext"></div></button>
-                            <input type="hidden" name="oculto2" id="oculto2"/>
-                            <input type="hidden" name="autor" id="autor" value="<%=autor%>" />
-                            <input type="hidden" name="tipo" id="tipo" value="1" />
-                            <input type="hidden" name="padre" id="padre" value="0" />
-                            <input type="hidden" name="estado" id="estado" value="1" />
+                        <button class="file-upload" id="enviar"><input type="file" id="imagen" name="imagen" class="file-input" onchange="validaImagen(this); txt2()"/>Agregar imagen:<div id="ext2"></div></button><br />
+                        <input type="hidden" name="oculto1" id="oculto1"/><br/>
+                        <button class="file-upload"  id="enviar"><input type="file" id="audio" name="audio" class="file-input" onchange="txt();"/>Agregar archivo:<div id="ext"></div></button>
+                        <input type="hidden" name="oculto2" id="oculto2"/>
+                        <input type="hidden" name="autor" id="autor" value="<%=autor%>" />
+                        <input type="hidden" name="tipo" id="tipo" value="1" />
+                        <input type="hidden" name="padre" id="padre" value="0" />
+                        <input type="hidden" name="estado" id="estado" value="1" />
                     </div>
                     <div id="botones">
                         <input type="submit" id="boto"  name="enviar" style="float: right; margin: 5px;" class="boton"></input>

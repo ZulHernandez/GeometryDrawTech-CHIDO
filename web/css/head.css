@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Roboto";
-    src: url(../fuentes/Roboto-Regular.ttf) format("truetype");
+    src: url("/Geometry%20Drawtech%202.0/fuentes/Roboto-Regular.ttf") format("truetype");
+
 }
 body
 {

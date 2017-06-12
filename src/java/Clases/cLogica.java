@@ -20,7 +20,7 @@ public class cLogica {
         }
         return gatito;
     }
-    public ResultSet consultaUsuario(String nom, String tipo, String clave){
+        public ResultSet consultaUsuario(String nom, String tipo, String clave){
         BD.cDatos sql = new BD.cDatos();
         ResultSet gatito = null;
         try{
